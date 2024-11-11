@@ -81,8 +81,18 @@ install_pipx() {
         echo "Installing pipx"
         sudo apt-get install -y pipx
         pipx ensurepath
-        export PIPX_BIN_DIR=/usr/local/bin  # Fix the export command
+				export PIPX_HOME=/usr/local/share/pipx
+        export PIPX_BIN_DIR=/usr/local/bin
     fi
+}
+
+install_git(){
+
+if command_exists git; then
+				echo "git already installed"
+else
+				sudo apt install git
+fi
 }
 
 # Installs AEL (custom tool setup)
@@ -146,7 +156,10 @@ install_user_settings() {
 
 # Install all required packages and configurations
 install() {
-    echo "Installing Fish shell..."
+ echo "Installing git..."
+ install_git
+				
+				echo "Installing Fish shell..."
     install_fish
 
     echo "Installing Neovim..."

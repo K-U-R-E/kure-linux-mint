@@ -1,0 +1,3 @@
+[submodule "AEL"]
+	path = AEL
+	url = https://github.com/K-U-R-E/kure_ael_daq.git

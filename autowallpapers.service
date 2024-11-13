@@ -1,0 +1,11 @@
+[Unit]
+Description=Sets KURE wallpapers
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/autowallpapers.sh
+RemainAfterExit=false
+
+[Install]
+WantedBy=multi-user.target

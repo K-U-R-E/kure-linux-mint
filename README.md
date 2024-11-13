@@ -25,3 +25,5 @@ Description:
 Notes:
 
 If you would like to use this you would have to disable the AEL installation portion as the binaries are not publicly distributed with this repo but brought in as a submodule from a private repo. Would also recommend that you change the user account setup as well
+
+I am not sure if my wallpaper enforcer service is working so you might want to review that bit
